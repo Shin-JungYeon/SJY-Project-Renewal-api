@@ -1,0 +1,8 @@
+.idea
+.project
+.git
+.settings
+target
+DEPLOYAPI_LOGDIR_IS_UNDEFINED
+.classpath
+*.iml
