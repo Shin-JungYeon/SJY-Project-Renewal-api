@@ -1,4 +1,4 @@
-package sjy.jaengsplay.api.portal.point.domain;
+package sjy.jaengsplay.api.portal.user.domain;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

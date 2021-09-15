@@ -8,5 +8,6 @@ import sjy.jaengsplay.api.portal.notice.domain.Notice;
 
 @Repository
 public interface NoticeRepository extends JpaRepository<Notice, Long> {
+    Page<Notice> findAllByTitleContaining(Pageable pageable, String searchText);
     Page<Notice> findAll(Pageable pageable);
 }

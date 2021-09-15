@@ -26,7 +26,7 @@ public class NoticeServiceImpl implements NoticeService {
     @Override
     public Page<Notice> listNotice(int page, int size, String searchText) {
         Pageable pageable = PageRequest.of(page, size, Sort.by("created_date").descending());
-        return noticeRepository.findAll(pageable);
+        return noticeRepository.findAllByTitleContaining(pageable, searchText);
     }
 
     @Override
