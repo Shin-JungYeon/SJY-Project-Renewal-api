@@ -22,6 +22,10 @@ public class Point {
     @Column(nullable = false)
     private Long id;
 
+    @ApiModelProperty(value = "사용자 아이디")
+    @Column(nullable = false)
+    private String userEmail;
+
     @ApiModelProperty(value = "포인트")
     @Column(nullable = false)
     private Long amt;
