@@ -19,7 +19,7 @@ public class UserInfo {
     private Long id;
 
     @ApiModelProperty(value = "이메일")
-    @Column(nullable = false, length = 200)
+    @Column(nullable = false, unique = true, length = 200)
     private String email;
 
     @ApiModelProperty(value = "비밀번호")
@@ -31,8 +31,8 @@ public class UserInfo {
     private String userName;
 
     @ApiModelProperty(value = "닉네임")
-    @Column(nullable = false, length = 200)
-    private String nickName;
+    @Column(nullable = false, unique = true, length = 200)
+    private String nickname;
 
     @ApiModelProperty(value = "사용자 유형", notes = "A: admin / R: related / G: general")
     @Column(nullable = false, columnDefinition = "char(1) default 'G'")
