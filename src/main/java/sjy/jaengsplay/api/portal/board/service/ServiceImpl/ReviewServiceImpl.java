@@ -29,5 +29,7 @@ public class ReviewServiceImpl implements ReviewService {
         reviewBoard.setViewingArea(reviewBoardVo.getViewingArea());
         reviewBoard.setViewingScore(reviewBoardVo.getViewingScore());
         reviewBoard.setCreatedUserId("login id");
+
+        reviewRepository.save(reviewBoard);
     }
 }

@@ -1,5 +1,8 @@
 package sjy.jaengsplay.api.portal.board.web;
 
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +20,12 @@ public class ReviewController {
     @Autowired
     private ReviewService reviewService;
 
-    @PostMapping(value = "/reviews")
+    @ApiOperation(value = "리뷰 게시글 등록")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "reviewBoardVo", value = "리뷰 게시글 vo", dataType = "ReviewBoardVo", paramType = "body")
+
+    })
+    @PostMapping(value = "/reviewboards")
     public void insertReview(@RequestBody ReviewBoardVo reviewBoardVo) {
         reviewService.insertReview(reviewBoardVo);
     }
